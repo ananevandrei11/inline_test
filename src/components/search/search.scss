@@ -1,0 +1,31 @@
+.search {
+  max-width: 58.75rem;
+  height: 2.5rem;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  border: 2px solid $mainColor;
+  border-radius: 3px;
+  &:active, &:hover {
+    border: 2px solid $hoverColor;
+  }
+  &-input {
+    width: 93%;
+    padding-left: 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    border: none;
+    &::placeholder {
+      color: $subtextColor;
+    }
+  }
+  &-btn {
+    width: 7%;
+    background: $mainColor;
+    border: none;
+    &:hover {
+    background: $hoverColor;
+    transition: all 0.2s;
+    }
+  }
+}

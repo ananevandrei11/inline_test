@@ -1,0 +1,15 @@
+.header {
+  width: 100vw;
+  height: auto;
+  
+
+  &-nav {
+    height: 2.75rem;
+    background-color: $mainColor;
+  }
+  &-authn {
+    height: 2.75rem;
+    background-color: #F7F7F7;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  }
+}

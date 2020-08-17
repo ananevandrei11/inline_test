@@ -1,0 +1,31 @@
+.content {
+  width: 95%;
+  height: auto;
+  margin: auto;
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 10rem;
+  column-gap: 1.25rem;
+
+  &-aside {
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fill, 1fr);
+    row-gap: 1.25rem;
+
+  }
+  .aside-block {
+    width: 10rem;
+    height: 20rem;
+    display: flex;
+    background: #FAFAFA;
+  }
+
+  .aside-title {
+    margin: auto;
+    color: $subtextColor;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+  }
+}

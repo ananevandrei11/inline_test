@@ -1,0 +1,34 @@
+.router {
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &-item {
+    margin-right: 1rem;
+    position: relative;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    &::after {
+      position: absolute;
+      content: "";
+      height: 0.75rem;
+      top:0.1rem;
+      right: -0.5rem;
+      border-left: 1px solid #666666;
+      transform: rotate(15deg);
+    }
+    &:last-of-type::after {
+      border: none;
+    }
+  }
+  &-link {
+    color: #666666;
+    &:hover {
+      text-decoration-line: underline;
+    }
+  }
+  .active {
+    color: $titleColor;
+    font-weight: 500;
+  }
+}

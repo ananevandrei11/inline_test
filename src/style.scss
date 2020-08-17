@@ -1,0 +1,35 @@
+@import "./styles/var_mixin.scss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Roboto, sans-serif;
+  font-weight: normal;
+  color: $textColor;
+  overflow-x: hidden;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+input, button {
+  outline: none;
+}
+button {
+  cursor: pointer;
+}
+@import "./styles/header.scss";
+@import "./styles/main.scss";
+@import "./components/router/router.scss";
+@import "./components/search/search.scss";
