@@ -20,6 +20,11 @@ mixin trBody(classBtn, btn, link, dt, date, views, src, name, firm)
 mixin imgGallery(src)
   figure.company-gallery__figure
     img.company-gallery__img(src=src)
+    button.company-gallery__btn
+    p.company-gallery__count
+      span.count-item
+      span &nbsp;/&nbsp;
+      span.total-item
 
 article.company-product
   div.company-wrapper

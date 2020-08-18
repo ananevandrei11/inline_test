@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import './scripts/gallery.js';
 import './style.scss';
 
 import './images/loupe.svg';
