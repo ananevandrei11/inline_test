@@ -1,6 +1,6 @@
 .search {
-  max-width: 58.75rem;
-  height: 2.5rem;
+  max-width: 59rem;
+  height: 2.75rem;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
@@ -21,11 +21,15 @@
   }
   &-btn {
     width: 7%;
+    min-width: 4rem;
     background: $mainColor;
     border: none;
     &:hover {
     background: $hoverColor;
     transition: all 0.2s;
     }
+  }
+  &-btn_icon {
+    padding-top: 5%;
   }
 }

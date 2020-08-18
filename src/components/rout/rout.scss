@@ -1,0 +1,13 @@
+.rout {
+    &-img {
+        margin-right: 0.5rem;
+    }
+    &-link {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        color: $mainColor;
+        &:hover {
+            text-decoration-line: underline;
+        }
+    }
+}

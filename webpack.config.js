@@ -93,10 +93,11 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        use: [{
+        use: [
+          {
             loader: 'file-loader',
             options: {
-              name: '[name].[contenthash].[ext]',
+              name: '[name].[ext]',
               outputPath: './images',
               useRelativePath: true,
             },
