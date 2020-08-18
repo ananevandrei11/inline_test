@@ -14,6 +14,7 @@ body {
   flex-direction: column;
   font-family: Roboto, sans-serif;
   font-weight: normal;
+  letter-spacing: 0.2px;
   color: $textColor;
   overflow-x: hidden;
 }
@@ -36,4 +37,6 @@ button {
 @import "./components/rout/rout.scss";
 @import "./components/title/title.scss";
 @import "./components/buttons/buttons.scss";
-@import "./components/article/article.scss";
+@import "./components/company/company.scss";
+@import "./components/company/aside/aside.scss";
+@import "./components/company/article/article.scss";

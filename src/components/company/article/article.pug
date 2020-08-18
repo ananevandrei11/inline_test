@@ -1,0 +1,64 @@
+mixin trBody(classBtn, btn, link, dt, date, views, src, name, firm)
+  tr
+    td
+      div
+        button(class=classBtn)= btn
+        a(href="")= link
+    td
+      time(datetime=dt)= date
+    td
+      p= views
+    td
+      div
+        figure
+          img(src=src)
+        div
+          a(href="")= name
+          br
+          span= firm
+
+mixin imgGallery(src)
+  figure.company-gallery__figure
+    img.company-gallery__img(src=src)
+
+article.company-product
+  div.company-wrapper
+    h3.company-title Последние объявления сотрудников компании
+    hr.company-separator
+    table.company-table
+      thead.company-table__head
+        tr
+          td Объявление
+          td Время
+          td
+            img(src="./images/view.svg")
+          td Опубликовал
+      tbody.company-table__body
+        +trBody("btn-sell", "Продам", "Желудки куриные очищенные 60 руб.", "2020-02-05", "5 фев", "155", "./images/photo_not.png", "Татьяна Лобач", "Орехово-Зуевский мясокомбинат")
+
+        +trBody("btn-sell", "Продам", "ГоленьЦБ(подл) 100р, Желудки кур.очиш 60 р", "2020-01-27", "27 янв", "185", "./images/photo_not.png", "Татьяна Лобач", "Орехово-Зуевский мясокомбинат")
+
+        +trBody("btn-buy", "Куплю", "Курица, Индейка, Говядина, Свинина от МК", "2020-04-21", "21 апр", "42689", "./images/photo_not.png", "Татьяна Лобач", "Орехово-Зуевский мясокомбинат")
+
+        +trBody("btn-buy", "Куплю", "ГоленьЦБ(подл) 100р, Желудки кур.очиш 60 р", "2020-02-27", "27 фев", "319", "./images/photo_not.png", "Татьяна Лобач", "Орехово-Зуевский мясокомбинат")
+
+        +trBody("btn-sell", "Продам", "Курица, Индейка, Говядина, Свинина от МК", "2020-02-07", "7 фев", "10072", "./images/photo_not.png", "Татьяна Лобач", "Орехово-Зуевский мясокомбинат")
+
+        +trBody("btn-sell", "Продам", "Фарш куриный ММО люкс 40руб/кг", "2020-02-07", "7 фев", "300", "./images/photo_is.png", "Виталий Пчелинцев", "ООО ОКЕАНФИШ")
+
+        +trBody("btn-sell", "Продам", "Голень ЦБ ГОСТ 75 руб/кг", "2020-02-07", "7 фев", "319", "./images/photo_is.png", "Виталий Пчелинцев", "ООО ОКЕАНФИШ")
+
+  div.company-wrapper
+    h3.company-title Фото продукции
+    hr.company-separator
+    div.company-gallery
+      +imgGallery("./images/meat_1.png")
+      +imgGallery("./images/meat_2.png")
+      +imgGallery("./images/meat_3.png")
+      +imgGallery("./images/meat_4.png")
+      +imgGallery("./images/meat_5.png")
+      +imgGallery("./images/meat_6.png")
+      +imgGallery("./images/meat_7.png")
+      +imgGallery("./images/meat_8.png")
+      +imgGallery("./images/meat_9.png")
+      +imgGallery("./images/meat_10.png")

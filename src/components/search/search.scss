@@ -33,3 +33,9 @@
     padding-top: 5%;
   }
 }
+
+@media (max-width: 380px) {
+  .search {
+    max-width: 18.75rem;
+  }
+}

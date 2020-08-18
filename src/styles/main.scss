@@ -6,13 +6,14 @@
   display: grid;
   grid-template-columns: 1fr 10rem;
   column-gap: 1.25rem;
+  
   &-aside {
     height: auto;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(auto-fill, 1fr);
     row-gap: 1.25rem;
-
+    align-content: flex-start;
   }
   .aside-block {
     width: 10rem;
@@ -26,5 +27,34 @@
     color: $subtextColor;
     font-size: 1.25rem;
     line-height: 1.875rem;
+  }
+
+  .search, .title {
+    margin-top: 1rem;
+  }
+
+  .rout {
+    margin-top: 2rem;
+  }
+
+  .buttons {
+    margin-top: 1.125rem;
+  }
+
+  .company {
+    margin-top: 2.625rem;
+  }
+}
+
+@media (max-width:1172px) {
+  .content {
+    grid-template-columns: 1fr;
+    .aside-block {
+      width: 80%;
+      height: 10rem;
+      display: flex;
+      margin: 0 auto;
+      background: #FAFAFA;
+    }
   }
 }

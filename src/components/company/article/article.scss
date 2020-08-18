@@ -1,0 +1,233 @@
+.company {
+  &-product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &-wrapper {
+    margin-bottom: 1rem;
+  }
+
+  &-title {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 1.188rem;
+    line-height: 1.75rem;
+  }
+
+  &-separator {
+    margin-bottom: 1rem;
+    border: 1px solid #E0E0E0;
+  }
+
+  &-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
+  &-table__head {
+    tr {
+      height: 2rem;
+      background: #F0F0F0;
+    }
+
+    td {
+      text-align: center;
+    }
+
+    td:first-of-type {
+      text-align: left;
+      padding-left: 5.75rem;
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+
+    td:last-of-type {
+      text-align: left;
+      padding-left: 1rem;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+    }
+  }
+
+  &-table__body {
+    tr {
+      height: 3.5rem;
+      border-bottom: 1px solid #E0E0E0;
+    }
+
+    td {
+      min-width: 3.75rem;
+      text-align: center;
+
+      &:first-of-type,
+      &:last-of-type {
+        text-align: left;
+      }
+
+      &:first-of-type>div,
+      &:last-of-type>div:first-of-type {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+      }
+      &:first-of-type {
+        a {
+          white-space: nowrap;
+        }
+      }
+      &:last-of-type {
+        &>div:first-of-type {
+          margin-left: 1rem;
+        }
+
+        &>div:last-of-type {
+          margin-right: 1rem;
+        }
+
+        figure {
+          width: 1.875rem;
+          height: 2.5rem;
+          margin-right: 0.5rem;
+        }
+
+        a {
+          margin-left: 0rem;
+        }
+
+        span {
+          display: block;
+          width: 11rem;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          color: $subtextColor;
+        }
+      }
+    }
+
+    button {
+      min-width: 3.75rem;
+      min-height: 1.5rem;
+      margin-left: 1rem;
+      border: none;
+      border-radius: 3px;
+      font-size: 0.688rem;
+      font-weight: 500;
+      color: #FFFFFF;
+    }
+
+    a {
+      margin-left: 1rem;
+      color: $mainColor;
+
+      &:hover {
+        text-decoration-line: underline;
+      }
+    }
+  }
+
+  .btn-sell {
+    background: $mainColor;
+
+    &:hover {
+      background: $hoverColor;
+      transition: all 0.2s;
+    }
+  }
+
+  .btn-buy {
+    background: #f34d23;
+
+    &:hover {
+      background: #EE6C4D;
+      transition: all 0.2s;
+    }
+  }
+
+  &-gallery {
+    display: flex;
+    flex-wrap: wrap;
+
+    figure {
+      max-width: 10rem;
+      height: 7.5rem;
+      margin-top: 0.5rem;
+      margin-right: 0.5rem;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &-wrapper:last-of-type {
+    .company-separator {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+
+@media (max-width:560px) {
+  .company {
+    &-table__head {
+      td:nth-of-type(3) {
+        display: none;
+      }
+
+      td:first-of-type {
+        text-align: left;
+        padding-left: 1rem;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+      }
+    }
+
+    &-table__body {
+      td {
+        min-width: auto;
+
+        &:nth-of-type(3) {
+          display: none;
+        }
+
+        &:first-of-type>div,
+        &:last-of-type>div:first-of-type {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+
+          &:first-of-type {
+            a {
+              width: 7rem;
+              margin-top: 0.2rem;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              overflow: hidden;
+            }
+          }
+
+          &:last-of-type {
+            margin-top: 0.2rem;
+
+            a {
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              overflow: hidden;
+            }
+
+            span,
+            a {
+              width: 5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
