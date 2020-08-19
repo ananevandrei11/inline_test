@@ -5,17 +5,31 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Document
   body
+    // HEADER START
     header.header
       nav.header-nav
       section.header-authn
+    // HEADER END
+
+    // MAIN CONTENT START
     main.content
+      // CONTENT BLOCK START
       section.content-main
+        // ROUTER
         include ./components/router/router.pug
+        // SEARCH
         include ./components/search/search.pug
+        // ROUT
         include ./components/rout/rout.pug
+        // TITLE
         include ./components/title/title.pug
+        // BUTTONS
         include ./components/buttons/buttons.pug
+        // COMPANY INFO&TABLE
         include ./components/company/company.pug
+      // CONTENT BLOCK END
+
+      // ADV BLOCK START
       aside.content-aside
         div.aside-block
           p.aside-title
@@ -23,3 +37,8 @@ html(lang="en")
         div.aside-block
           p.aside-title
             | Реклама
+      // ADV BLOCK END
+
+    // MAIN CONTENT END
+
+    include ./components/slider/slider.pug
